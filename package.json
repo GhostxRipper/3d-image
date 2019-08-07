@@ -5,7 +5,9 @@
   "dependencies": {
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1"
+    "react-scripts": "3.0.1",
+    "react-spring": "^8.0.27",
+    "react-use-gesture": "^5.2.4"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -14,7 +16,50 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "env": {
+      "browser": true,
+      "jest": true
+    },
+    "extends": [
+      "react-app",
+      "airbnb"
+    ],
+    "parser": "babel-eslint",
+    "rules": {
+      "no-negated-condition": 2,
+      "no-console": [
+        1,
+        {
+          "allow": [
+            "warn",
+            "error"
+          ]
+        }
+      ],
+      "max-len": [
+        2,
+        80
+      ],
+      "semi": [
+        1,
+        "never"
+      ],
+      "import/no-extraneous-dependencies": [
+        "error",
+        {
+          "devDependencies": true
+        }
+      ],
+      "react/jsx-filename-extension": [
+        1,
+        {
+          "extensions": [
+            ".js"
+          ]
+        }
+      ],
+      "import/no-cycle": 0
+    }
   },
   "browserslist": {
     "production": [
@@ -27,5 +72,15 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "babel-eslint": "10.0.1",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "17.1.1",
+    "eslint-config-react-app": "^4.0.1",
+    "eslint-plugin-flowtype": "^3.13.0",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.2"
   }
 }
